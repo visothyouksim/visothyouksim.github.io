@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Développeur Web et Web Mobile Junior basé à Torcy (77200), en Île-de-France.">
+    <meta name="author" content="Visoth YOUK SIM">
+    <!-- FAVICON -->
+    <link rel="icon" type="image/ico" href="./img/favicon-32x32.png">
+    <title name="description">Portfolio de Visoth YOUK SIM - Développeur Web et Web Mobile à Torcy</title>
+    <!-- Bootstrap core CSS -->
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="menu">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><i class="fa-solid fa-house fa-2xl"></i></i></a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="#about">A propos de moi</a></li>
+                    <li><a href="#portfolio">Mes projets</a></li>
+                    <li><a href="#contact">Contactez-moi</a></li>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </div>
+
+    <div class="container-fluid splash" id="splash">
+        <div class="container">
+            <img src="/img/WhatsApp%20Image%202023-05-04%20à%2018.35.53.jpg" alt="profilPic" class="profile-image">
+            <h1>BIENVENUE !</h1>
+            <h1 class="intro-text"><span class="lead" id="typed">Visoth YOUK SIM </span></h1>
+            <span class="continue"><a href="#about"><i class="fa fa-angle-down"></i></a></span>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section class="success" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>A propos de moi</h2>
+                    <hr class="star-light">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p class="content-text" style="text-align:justify;">Bonjour à toutes et à tous ! Je suis un
+                        Développeur Web Junior basé à Torcy, en Île-de-France. Je travaille avec certaines des
+                        technologies les plus populaires pour créer de beaux sites web qui se font remarquer. Je
+                        recherche de l'expérience afin d'acquérir plus de connaissances dans le domaine du développement
+                        web.
+                    </p>
+                </div>
+                <hr>
+                <div class="col-lg-12">
+                    <p class="content-text text-center">Si vous avez besoin d'un beau site web, je suis à votre
+                        disposition.</p>
+                </div>
+                <div class="col-lg-8 col-lg-offset-2 text-center contact-button">
+                    <a href="#contact" class="btn btn-lg btn-outline">
+                        <i class="fa fa-envelope"></i> Contactez-moi
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio -->
+    <div class="container-fluid portfolio-container-holder content-section" id="portfolio">
+        <div class="portfolio-container container">
+            <h1 class="text-center">Mes projets</h1>
+            <hr class="star-portfolio">
+            <div class="row">
+                
+                <div class="col-md-4 col-xs-12 col-sm-4 portfolio-card-holder text-center">
+                    <div class=" portfolio-card">
+                        <div class="portfolio-img-desc">
+                            <h5>Mill'Pattounes (Projet fictif)</h5>
+                            <p><strong>HTML5 - CSS3 - Bootstrap - PHP - Symfony 6</strong></p>
+                        </div>
+                        <img id="openModalBtn" class="img-fluid" src="./img/millPattounes1.png"
+                            alt="Ouvrir la boîte modale">
+                        <div id="myModal" class="modal">
+                            <div class="modal-content">
+                                <span class="close">&times;</span>
+                                <p>Mill'Pattounes (Projet fictif)</p>
+                                <p><strong>HTML5 - CSS3 - Bootstrap - PHP - Symfony 6</strong></p>
+                                <img class="imgModal" src="./img/millPattounes2.png" alt="">
+                                <p>Le site du Refuge des MILL’PATTOUNES a pour but de mettre des animaux disponibles à l’adoption. Il permet également de déclarer la disparition de son animal, de consulter la liste des animaux disparus, de s’informer sur les procédures d’adoption, les démarches à suivre en cas de disparition, d'entrer en contact avec le responsable du Refuge et consulter les actualités.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>                
+
+                <div class="col-md-4 col-xs-12 col-sm-4 portfolio-card-holder text-center">
+                    <div class=" portfolio-card">
+                        <div class="portfolio-img-desc">
+                            <h5>Travel Agency (Projet d'étude)</h5>
+                            <p><strong>HTML5 - CSS3</strong></p>
+                        </div>
+                        <img id="openModalBt2" class="img-fluid" src="./img/TravelAgency.png"
+                            alt="Ouvrir la boîte modale">
+                        <div id="myModal3" class="modal">
+                            <div class="modal-content">
+                                <span class="close">&times;</span>
+                                <p>Travel Agency (Projet d'étude)</p>
+                                <p><strong>HTML5 - CSS3</strong></p>
+                                <img class="imgModal" src="./img/travelAgency1.png" alt="">
+                                <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus eos, dolorum perspiciatis esse blanditiis veritatis, facilis placeat atque expedita quasi eum tempora porro incidunt animi?</p> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-xs-12 col-sm-4 portfolio-card-holder text-center">
+                    <div class=" portfolio-card">
+                        <div class="portfolio-img-desc">
+                            <h5>MyUnicorn (Projet d'étude)</h5>
+                            <p><strong>HTML5 - CSS3</strong></p>
+                        </div>
+                        <img id="openModalBtn3" class="img-fluid" src="./img/screencapture-127-0-0-1-5502-index-html-2023-09-11-14_50_17 (1) (1).png"
+                            alt="Ouvrir la boîte modale">
+                        <div id="myModal2" class="modal">
+                            <div class="modal-content">
+                                <span class="close">&times;</span>
+                                <p>MyUnicorn (Projet d'étude)</p>
+                                <p><strong>HTML5 - CSS3</strong></p>
+                                <img class="imgModal" src="./img/myUnicorn1.png" alt="">
+                                <!-- <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid, voluptatum odio qui commodi repellendus tempora? Consectetur delectus ducimus eveniet quod nisi, molestias dolores inventore ut?</p> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact form -->
+    <div class="container-fluid contact-me-container content-section" id="contact">
+        <div class="container">
+            <h1 class="intro-text text-center">Contactez-moi</h1>
+            <hr class="star-light">
+            <div class="row">
+                <div class="col-sm-12 col-md-12">
+
+                    <form id="myForm">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-addon"><i class="fa fa-user"></i></div>
+                                <input type="text" class="form-control" id="name" placeholder="Votre nom" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-addon"><i class="fa fa-at"></i></div>
+                                <input type="text" class="form-control" id="email" placeholder="Votre Email" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-addon"><i class="fa fa-phone"></i></div>
+                                <input type="text" class="form-control" id="phone" placeholder="Votre N° de téléphone"
+                                    required>
+                            </div>
+                        </div>
+
+                        <textarea class="form-control" id="message" rows="5" placeholder="Votre message"
+                            required></textarea>
+
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-default submit-button btn-lg btn-primary"
+                                id="submitButton"><i class="fa fa-paper-plane"></i> Envoyer</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <div class="row footer-row">
+                <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                    <!--<h4 class="text-center">Find me here</h4>-->
+                    <address>
+                        <strong><i class="fa fa-location-arrow"></i> Visoth YOUK SIM</strong><br>
+                        <p>visothyouksim@gmail.com</p><br>Torcy (77200), France<br><br>
+                        <!-- <i class="fa fa-mobile"></i><span> 07.49.03.11.76</span> -->
+                    </address>
+                </div>
+
+                <!--
+            <div class="col-xs-12 col-md-6 col-sm-6 social-section">
+                <div class="text-center">
+                    <h4 class="text-center">Also, I can be found here</h4>
+                    <div class="text-center social-buttons">
+                        <a href="#" class="btn btn-default btn-lg social-button link-facebook"><i
+                                class="fa fa-facebook"></i>
+                        </a>
+
+                        <a href="https://codepen.io/simplysuvi/"
+                           class="btn btn-default btn-lg social-button link-codepen"><i class="fa fa-codepen"></i>
+                        </a>
+
+                        <a href="#" class="btn btn-default btn-lg social-button link-twitter"><i
+                                class="fa fa-twitter"></i>
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/simplysuvi"
+                           class="btn btn-default btn-lg social-button link-linkedin"><i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="https://instagram.com/simplysuvi"
+                           class="btn btn-default btn-lg social-button link-instagram"><i class="fa fa-instagram"></i>
+                        </a>
+                    </div>
+                    <hr class="footer-hr">
+                    <h4 class="author">Made with <i class="fa fa-heart"></i> by <strong>Visoth YOUK SIM</strong></h4>
+                </div>
+            </div>
+            -->
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
