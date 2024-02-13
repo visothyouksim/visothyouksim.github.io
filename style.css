@@ -499,9 +499,10 @@ hr.copyright {
 .modal-content {
   background-color: #fff;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -509,8 +510,7 @@ hr.copyright {
 
 /* Image dans la modal */
 .imgModal {
-  width: 75%;
-  height: 100%;
+  height: 85vh;
   object-fit: cover;
 }
 
@@ -519,6 +519,6 @@ hr.copyright {
   position: absolute;
   top: 10px;
   right: 10px;
-  font-size: 20px;
+  font-size: 50px;
   cursor: pointer;
 }
