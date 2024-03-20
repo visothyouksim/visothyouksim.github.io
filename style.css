@@ -26,7 +26,7 @@ ul.navbar-nav li {
   padding: 0 10px;
 }
 
-@media only screen and (max-width:767px) {
+@media only screen and (max-width: 767px) {
   ul.navbar-nav {
     float: none;
   }
@@ -78,7 +78,8 @@ a.navbar-brand .fa-house:hover {
 }
 
 .splash {
-  background: url("/img/circle-g84b984d67_1920.jpg") no-repeat fixed center bottom;
+  background: url("/img/circle-g84b984d67_1920.jpg") no-repeat fixed center
+    bottom;
   background-size: cover;
   color: #fff;
 }
@@ -102,7 +103,7 @@ a.navbar-brand .fa-house:hover {
 
 .splash h1 {
   font-size: 40px;
-  margin-bottom: .15em;
+  margin-bottom: 0.15em;
   text-align: center;
 }
 
@@ -227,7 +228,7 @@ h1.intro-text {
 }
 
 .splash .continue a:hover {
-  background-color: rgba(255, 255, 255, .25);
+  background-color: rgba(255, 255, 255, 0.25);
 }
 
 #about,
@@ -277,8 +278,8 @@ hr.star-portfolio:after {
   content: "\f005";
   display: inline-block;
   position: relative;
-  top: -.8em;
-  padding: 0 .25em;
+  top: -0.8em;
+  padding: 0 0.25em;
   font-family: FontAwesome;
   font-size: 2em;
 }
@@ -310,19 +311,17 @@ p.content-text {
   box-shadow: 0px 2px 5px #888888;
   background: #eee;
   border-radius: 4px;
-
 }
 
 .portfolio-card:hover {
   box-shadow: 0px 10px 10px #888888;
-  cursor: pointer
+  cursor: pointer;
 }
 
 .portfolio-container-holder {
   background: #eee;
   padding-bottom: 20px;
 }
-
 
 .portfolio-card-holder {
   padding: 5px;
@@ -367,7 +366,7 @@ Footer
 ======================== */
 
 footer {
-  background-color: #2C3E50;
+  background-color: #2c3e50;
   color: #fff;
   font-size: 1.5em;
   text-align: center;
@@ -401,7 +400,7 @@ a.link-instagram {
 }
 
 a.link-twitter {
-  color: #1DA1F2;
+  color: #1da1f2;
 }
 
 a.link-facebook {
@@ -422,7 +421,7 @@ a.link-facebook:hover {
 }
 
 a.link-twitter:hover {
-  background-color: #1DA1F2;
+  background-color: #1da1f2;
   color: #fff;
 }
 
