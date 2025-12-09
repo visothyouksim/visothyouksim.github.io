@@ -280,26 +280,73 @@ $(document).ready(function () {
   });
 });
 
-// ------------------------- MES PROJETS ------------------------------------
+// ------------------------- GESTION DES MODALS ------------------------------------
 
-// Récupérez toutes les images et les modales
-var images = document.querySelectorAll(".img-fluid");
-var modals = document.querySelectorAll(".modal");
+// Fonction pour ouvrir une modal
+function openModal(modalId) {
+  const modal = document.getElementById(modalId);
+  if (modal) {
+    modal.classList.add("show");
+    document.body.style.overflow = "hidden"; // Empêche le scroll du body
+  }
+}
 
-// Associez un gestionnaire d'événements au clic sur chaque image
-images.forEach(function (image, index) {
-  image.addEventListener("click", function () {
-    // Ouvrez la modal correspondante en ajoutant la classe "show" à la modal
-    modals[index].classList.add("show");
+// Fonction pour fermer une modal
+function closeModal(modalId) {
+  const modal = document.getElementById(modalId);
+  if (modal) {
+    modal.classList.remove("show");
+    document.body.style.overflow = ""; // Réactive le scroll du body
+  }
+}
+
+// Attendre que le DOM soit chargé
+document.addEventListener("DOMContentLoaded", function () {
+  // Mapping entre les boutons et leurs modals respectives
+  const modalMapping = {
+    openModalBtn: "myModal", // Mill'Pattounes
+    openModalBtn2: "myModal2", // Space Travel
+    openModalBtn3: "myModal3", // MyUnicorn
+  };
+
+  // Event listeners pour ouvrir les modals
+  Object.keys(modalMapping).forEach(function (btnId) {
+    const btn = document.getElementById(btnId);
+    if (btn) {
+      btn.addEventListener("click", function () {
+        openModal(modalMapping[btnId]);
+      });
+    }
+  });
+
+  // Event listeners pour fermer les modals avec le bouton X
+  document.querySelectorAll(".close").forEach(function (closeBtn) {
+    closeBtn.addEventListener("click", function () {
+      // Trouver la modal parente
+      const modal = this.closest(".modal");
+      if (modal) {
+        closeModal(modal.id);
+      }
+    });
+  });
+
+  // Fermer la modal en cliquant sur le fond (backdrop)
+  document.querySelectorAll(".modal").forEach(function (modal) {
+    modal.addEventListener("click", function (e) {
+      // Vérifier si on clique directement sur la modal (pas sur son contenu)
+      if (e.target === this) {
+        closeModal(this.id);
+      }
+    });
+  });
+
+  // Fermer la modal avec la touche Échap
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" || e.key === "Esc") {
+      // Fermer toutes les modals ouvertes
+      document.querySelectorAll(".modal.show").forEach(function (modal) {
+        closeModal(modal.id);
+      });
+    }
   });
 });
-
-// Associez un gestionnaire d'événements au clic sur le bouton de fermeture de la modal
-var closeButtons = document.querySelectorAll(".close");
-closeButtons.forEach(function (button, index) {
-  button.addEventListener("click", function () {
-    // Fermez la modal correspondante en supprimant la classe "show"
-    modals[index].classList.remove("show");
-  });
-});
-    

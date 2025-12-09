@@ -306,45 +306,75 @@ p.content-text {
   font-size: 25px;
 }
 
-/* PORTFOLIO */
+/* ========================
+PORTFOLIO - CARDS AMÉLIORÉES
+======================== */
 .portfolio-card {
-  box-shadow: 0px 2px 5px #888888;
-  background: #eee;
-  border-radius: 4px;
+  box-shadow: 0px 2px 5px rgba(136, 136, 136, 0.3);
+  background: #fff;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  overflow: hidden;
 }
 
 .portfolio-card:hover {
-  box-shadow: 0px 10px 10px #888888;
+  box-shadow: 0px 10px 25px rgba(136, 136, 136, 0.4);
+  transform: translateY(-5px);
   cursor: pointer;
 }
 
 .portfolio-container-holder {
   background: #eee;
-  padding-bottom: 20px;
+  padding-bottom: 40px;
 }
 
 .portfolio-card-holder {
-  padding: 5px;
-  margin-bottom: 5px;
+  padding: 15px;
+  margin-bottom: 15px;
 }
 
 .portfolio-img {
   width: 100%;
-  border-radius: 4px 4px 0 0;
+  border-radius: 8px 8px 0 0;
+  transition: transform 0.3s ease;
+}
+
+.portfolio-card:hover .portfolio-img {
+  transform: scale(1.05);
 }
 
 .portfolio-img-desc {
   position: relative;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
   background: #fff;
-  color: #000;
+  color: #333;
   text-align: center;
-  padding: 5px;
+  padding: 15px;
+  border-radius: 0 0 8px 8px;
 }
 
-/* Contact */
+.portfolio-img-desc h5 {
+  margin: 0 0 8px 0;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.portfolio-img-desc p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #7f8c8d;
+}
+
+/* Styles pour l'image de la carte */
+.portfolio-card .img-fluid {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+/* ========================
+CONTACT
+======================== */
 .contact-me-container {
   padding: 3%;
   background: rgb(13, 79, 136);
@@ -362,7 +392,7 @@ p.content-text {
 }
 
 /* ========================
-Footer
+FOOTER
 ======================== */
 
 footer {
@@ -463,7 +493,6 @@ hr.copyright {
 }
 
 /* CARD */
-
 .card {
   width: 300px;
   border: 1px solid #ccc;
@@ -471,7 +500,11 @@ hr.copyright {
   margin: 20px;
 }
 
-/* Styles pour la boîte modale */
+/* ========================
+MODAL - VERSION FINALE COMPLÈTE
+======================== */
+
+/* Overlay de la modal */
 .modal {
   display: none;
   position: fixed;
@@ -479,45 +512,300 @@ hr.copyright {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.85);
+  z-index: 9999;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  overflow-y: auto;
+  padding: 20px;
 }
 
-/* Styles pour afficher la modal */
+/* Animation d'ouverture - CENTRAGE PARFAIT */
 .modal.show {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  opacity: 1;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Contenu de la modal - Design moderne et centré */
+.modal-content {
+  background-color: #fff;
+  position: relative;
+  max-width: 900px;
+  width: 90%;
+  max-height: 90vh;
+  margin: 0 !important;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  overflow-y: auto;
+  transform: scale(0.9);
+  animation: scaleIn 0.3s ease forwards;
+  box-sizing: border-box;
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Modal Header */
+.modal-header {
+  text-align: center;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #ecf0f1;
+}
+
+.modal-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin: 0 0 5px 0;
+}
+
+.modal-subtitle {
+  font-size: 1.1rem;
+  color: #7f8c8d;
+  margin: 0 0 20px 0;
+  font-style: italic;
+}
+
+/* Technologies Badges */
+.modal-technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.tech-badge {
+  display: inline-block;
+  padding: 6px 14px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+  transition: all 0.3s ease;
+}
+
+.tech-badge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+/* Modal Body */
+.modal-body {
+  padding: 0;
+}
+
+.modal-image-container {
+  margin-bottom: 25px;
+}
+
+.modal-description {
+  padding: 0 10px;
+}
+
+.modal-description p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #555;
+  margin: 0;
+  text-align: justify;
+}
+
+/* Image dans la modal - CORRECTION COMPLÈTE */
+.imgModal {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  max-height: 50vh;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
   display: block;
 }
 
-/* Styles pour l'image de la carte */
-.portfolio-card .img-fluid {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-}
-
-/* Styles pour le contenu de la modal */
-.modal-content {
-  background-color: #fff;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-/* Image dans la modal */
-.imgModal {
-  height: 85vh;
-  object-fit: cover;
-}
-
-/* Styles pour le bouton de fermeture */
+/* Bouton de fermeture - Amélioré */
 .close {
   position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 50px;
+  top: 15px;
+  right: 20px;
+  font-size: 0;
+  color: #95a5a6;
+  background: transparent;
+  border: none;
   cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  padding: 0;
+}
+
+.close span {
+  font-size: 40px;
+  font-weight: 300;
+  line-height: 1;
+  display: block;
+}
+
+.close:hover {
+  color: #e74c3c;
+  background-color: rgba(231, 76, 60, 0.1);
+  transform: rotate(90deg);
+}
+
+.close:focus {
+  outline: 2px solid #e74c3c;
+  outline-offset: 2px;
+}
+
+/* Responsive pour tablette et mobile */
+@media (max-width: 768px) {
+  .modal {
+    padding: 15px;
+  }
+
+  .modal-content {
+    width: 95%;
+    padding: 30px 20px;
+    max-height: 95vh;
+  }
+
+  .modal-header {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+  }
+
+  .modal-title {
+    font-size: 1.5rem;
+  }
+
+  .modal-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .tech-badge {
+    font-size: 0.75rem;
+    padding: 5px 10px;
+  }
+
+  .imgModal {
+    max-height: 40vh !important;
+  }
+
+  .modal-description p {
+    font-size: 0.95rem;
+    text-align: left;
+  }
+
+  .close {
+    top: 10px;
+    right: 15px;
+    width: 35px;
+    height: 35px;
+  }
+
+  .close span {
+    font-size: 35px;
+  }
+}
+
+/* Très petits écrans (smartphones) */
+@media (max-width: 480px) {
+  .modal {
+    padding: 10px;
+  }
+
+  .modal-content {
+    width: 98%;
+    padding: 25px 15px;
+  }
+
+  .modal-header {
+    margin-bottom: 15px;
+    padding-bottom: 12px;
+  }
+
+  .modal-title {
+    font-size: 1.3rem;
+  }
+
+  .modal-subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+  }
+
+  .tech-badge {
+    font-size: 0.7rem;
+    padding: 4px 8px;
+  }
+
+  .imgModal {
+    max-height: 35vh !important;
+  }
+
+  .modal-description p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .close {
+    top: 8px;
+    right: 12px;
+    width: 32px;
+    height: 32px;
+  }
+
+  .close span {
+    font-size: 30px;
+  }
+}
+
+/* Scrollbar personnalisée pour la modal */
+.modal-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+  background: #bdc3c7;
+  border-radius: 10px;
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+  background: #95a5a6;
 }

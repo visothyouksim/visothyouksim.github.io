@@ -86,74 +86,130 @@
 
     <!-- Portfolio -->
     <div class="container-fluid portfolio-container-holder content-section" id="portfolio">
-        <div class="portfolio-container container">
-            <h1 class="text-center">Mes projets</h1>
-            <hr class="star-portfolio">
-            <div class="row">
-                
-                <div class="col-md-4 col-xs-12 col-sm-4 portfolio-card-holder text-center">
-                    <div class=" portfolio-card">
-                        <div class="portfolio-img-desc">
-                            <h5>Mill'Pattounes (Projet fictif)</h5>
-                            <p><strong>HTML5 - CSS3 - Bootstrap - PHP - Symfony 6</strong></p>
-                        </div>
-                        <img id="openModalBtn" class="img-fluid" src="./img/millPattounes002 (2).png"
-                            alt="Ouvrir la boîte modale">
-                        <div id="myModal" class="modal">
-                            <div class="modal-content">
-                                <span class="close">&times;</span>
-                                <p>Mill'Pattounes (Projet fictif)</p>
-                                <p><strong>HTML5 - CSS3 - Bootstrap - PHP - Symfony 6</strong></p>
-                                <img class="imgModal" src="./img/millPattounes001 (1).png" alt="">
-                                <p>Le site du Refuge des MILL'PATTOUNES a pour but de mettre des animaux disponibles à l’adoption. Il permet également de déclarer la disparition de son animal, de consulter la liste des animaux disparus, de s’informer sur les procédures d’adoption, les démarches à suivre en cas de disparition, d'entrer en contact avec le responsable du Refuge et consulter les actualités.</p>
-                            </div>
-                        </div>
+    <div class="portfolio-container container">
+        <h1 class="text-center">Mes projets</h1>
+        <hr class="star-portfolio">
+        <div class="row">
+            
+            <!-- Card 1 -->
+            <div class="col-md-4 col-xs-12 col-sm-4 portfolio-card-holder text-center">
+                <div class="portfolio-card">
+                    <div class="portfolio-img-desc">
+                        <h5>Mill'Pattounes (Projet fictif)</h5>
+                        <p><strong>HTML5 - CSS3 - Bootstrap - PHP - Symfony 6</strong></p>
                     </div>
-                </div>                
-
-                <div class="col-md-4 col-xs-12 col-sm-4 portfolio-card-holder text-center">
-                    <div class=" portfolio-card">
-                        <div class="portfolio-img-desc">
-                            <h5>Space Travel (Projet d'étude)</h5>
-                            <p><strong>HTML5 - CSS3</strong></p>
-                        </div>
-                        <img id="openModalBt2" class="img-fluid" src="./img/spaceTravel (1).png"
-                            alt="Ouvrir la boîte modale">
-                        <div id="myModal3" class="modal">
-                            <div class="modal-content">
-                                <span class="close">&times;</span>
-                                <p>Space Travel (Projet d'étude)</p>
-                                <p><strong>HTML5 - CSS3</strong></p>
-                                <img class="imgModal" src="./img/spaceTravel (2).png" alt="">
-                                <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus eos, dolorum perspiciatis esse blanditiis veritatis, facilis placeat atque expedita quasi eum tempora porro incidunt animi?</p> -->
-                            </div>
-                        </div>
-                    </div>
+                    <img id="openModalBtn" class="img-fluid" src="./img/millPattounes002 (2).png"
+                        alt="Ouvrir la boîte modale">
                 </div>
+            </div>                
 
-                <div class="col-md-4 col-xs-12 col-sm-4 portfolio-card-holder text-center">
-                    <div class=" portfolio-card">
-                        <div class="portfolio-img-desc">
-                            <h5>MyUnicorn (Projet d'étude)</h5>
-                            <p><strong>HTML5 - CSS3</strong></p>
-                        </div>
-                        <img id="openModalBtn3" class="img-fluid" src="./img/screencapture-127-0-0-1-5502-index-html-2023-09-11-14_50_17 (1) (1).png"
-                            alt="Ouvrir la boîte modale">
-                        <div id="myModal2" class="modal">
-                            <div class="modal-content">
-                                <span class="close">&times;</span>
-                                <p>MyUnicorn (Projet d'étude)</p>
-                                <p><strong>HTML5 - CSS3</strong></p>
-                                <img class="imgModal" src="./img/myUnicorn1.png" alt="">
-                                <!-- <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid, voluptatum odio qui commodi repellendus tempora? Consectetur delectus ducimus eveniet quod nisi, molestias dolores inventore ut?</p> -->
-                            </div>
-                        </div>
+            <!-- Card 2 -->
+            <div class="col-md-4 col-xs-12 col-sm-4 portfolio-card-holder text-center">
+                <div class="portfolio-card">
+                    <div class="portfolio-img-desc">
+                        <h5>Space Travel (Projet d'étude)</h5>
+                        <p><strong>HTML5 - CSS3</strong></p>
                     </div>
+                    <img id="openModalBtn2" class="img-fluid" src="./img/spaceTravel (1).png"
+                        alt="Ouvrir la boîte modale">
                 </div>
+            </div>
 
+            <!-- Card 3 -->
+            <div class="col-md-4 col-xs-12 col-sm-4 portfolio-card-holder text-center">
+                <div class="portfolio-card">
+                    <div class="portfolio-img-desc">
+                        <h5>MyUnicorn (Projet d'étude)</h5>
+                        <p><strong>HTML5 - CSS3</strong></p>
+                    </div>
+                    <img id="openModalBtn3" class="img-fluid" src="./img/screencapture-127-0-0-1-5502-index-html-2023-09-11-14_50_17 (1) (1).png"
+                        alt="Ouvrir la boîte modale">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- MODALS EN DEHORS DES CARDS -->
+<!-- Modal 1 - Mill'Pattounes -->
+<div id="myModal" class="modal" role="dialog" aria-labelledby="modal1-title" aria-hidden="true">
+    <div class="modal-content">
+        <button class="close" data-modal="myModal" aria-label="Fermer la modal">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        
+        <div class="modal-header">
+            <h2 id="modal1-title" class="modal-title">Mill'Pattounes</h2>
+            <p class="modal-subtitle">(Projet fictif)</p>
+            <div class="modal-technologies">
+                <span class="tech-badge">HTML5</span>
+                <span class="tech-badge">CSS3</span>
+                <span class="tech-badge">Bootstrap</span>
+                <span class="tech-badge">PHP</span>
+                <span class="tech-badge">Symfony 6</span>
+            </div>
+        </div>
+        
+        <div class="modal-body">
+            <div class="modal-image-container">
+                <img class="imgModal" src="./img/millPattounes001 (1).png" alt="Capture d'écran du site Mill'Pattounes">
+            </div>
+            
+            <div class="modal-description">
+                <p>Le site du Refuge des MILL'PATTOUNES a pour but de mettre des animaux disponibles à l'adoption. Il permet également de déclarer la disparition de son animal, de consulter la liste des animaux disparus, de s'informer sur les procédures d'adoption, les démarches à suivre en cas de disparition, d'entrer en contact avec le responsable du Refuge et consulter les actualités.</p>
             </div>
         </div>
     </div>
+</div>
+
+<!-- Modal 2 - Space Travel -->
+<div id="myModal2" class="modal" role="dialog" aria-labelledby="modal2-title" aria-hidden="true">
+    <div class="modal-content">
+        <button class="close" data-modal="myModal2" aria-label="Fermer la modal">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        
+        <div class="modal-header">
+            <h2 id="modal2-title" class="modal-title">Space Travel</h2>
+            <p class="modal-subtitle">(Projet d'étude)</p>
+            <div class="modal-technologies">
+                <span class="tech-badge">HTML5</span>
+                <span class="tech-badge">CSS3</span>
+            </div>
+        </div>
+        
+        <div class="modal-body">
+            <div class="modal-image-container">
+                <img class="imgModal" src="./img/spaceTravel (2).png" alt="Capture d'écran du site Space Travel">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal 3 - MyUnicorn -->
+<div id="myModal3" class="modal" role="dialog" aria-labelledby="modal3-title" aria-hidden="true">
+    <div class="modal-content">
+        <button class="close" data-modal="myModal3" aria-label="Fermer la modal">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        
+        <div class="modal-header">
+            <h2 id="modal3-title" class="modal-title">MyUnicorn</h2>
+            <p class="modal-subtitle">(Projet d'étude)</p>
+            <div class="modal-technologies">
+                <span class="tech-badge">HTML5</span>
+                <span class="tech-badge">CSS3</span>
+            </div>
+        </div>
+        
+        <div class="modal-body">
+            <div class="modal-image-container">
+                <img class="imgModal" src="./img/myUnicorn1.png" alt="Capture d'écran du site MyUnicorn">
+            </div>
+        </div>
+    </div>
+</div>
 
     <!-- Contact form -->
     <div class="container-fluid contact-me-container content-section" id="contact">
